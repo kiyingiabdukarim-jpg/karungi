@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Question for You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff7f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .box {
+            background: white;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.12);
+            max-width: 420px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #444;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 18px;
+            margin: 10px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .yes {
+            background: #ff5e8e;
+            color: white;
+        }
+        .yes:hover {
+            background: #ff437b;
+        }
+        .no {
+            background: #ececec;
+            color: #333;
+            position: relative;
+        }
+        .no:hover {
+            background: #d6d6d6;
+        }
+        .emoji {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="emoji">😄❤️</div>
+        <h1>So... Fatia 😏</h1>
+        <p>You’ve officially reached the final level.<br>
+        The boss fight question is here 👇</p>
+        <h1>Will you be my girlfriend?</h1>
+        <a class="btn yes" href="#">Yes, obviously 😌❤️</a>
+        <a class="btn no" href="#">No (but this button is useless) 😂</a>
+    </div>
+
+    <script>
+        const noBtn = document.querySelector('.no');
+        noBtn.addEventListener('mouseover', () => {
+            const x = Math.floor(Math.random() * 200) - 100;
+            const y = Math.floor(Math.random() * 200) - 100;
+            noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    </script>
+</body>
+</html>
